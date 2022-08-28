@@ -1,22 +1,22 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
-const { convertToPascalCase } = require('./utils')
+const {convertToPascalCase} = require('./utils')
 
 const argv = require('yargs/yargs')(process.argv.slice(2))
   .alias('n', 'component-name')
   .describe('n', 'Name of your Component \nExample: my-component-name \n')
-  .alias('p', './path/to/your/component')
-  .describe('p', 'Path where you want your component \nExample ./src/ \n')
   .alias('v', 'version')
-  .demandOption(['n', 'p'])
+  .demandOption(['n'])
   .help('help')
   .argv
 
-const componentPath = `${argv.p}${argv.n}`
+const componentPath = `./${argv.n}`
 const folderComponentName = argv.n
 const componentName = convertToPascalCase(folderComponentName);
-const templatePath = './src/component-template/ComponentTemplate.tsx'
+const templatePath = './bin/component-template/ComponentTemplate.tsx'
 
-fs.mkdir(componentPath, { recursive: true }, (error) => {
+fs.mkdir(componentPath, {recursive: true}, (error) => {
   if (error) {
     throw error
   }
@@ -87,9 +87,6 @@ fs.mkdir(componentPath, { recursive: true }, (error) => {
   })
 
 
-
 });
 
-
-// console.log(`Args: ${argv.n} - ${argv.p}`)
 

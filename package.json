@@ -2,16 +2,12 @@
   "name": "react-component-template",
   "version": "1.1.0",
   "description": "",
-  "main": "build/cli.cjs.js",
-  "module": "build/cli.esm.js",
-  "files": [
-    "build"
-  ],
+  "main": "bin/cli.js",
   "bin": {
-    "crct": "./src/cli.js"
+    "create-component": "bin/cli.js"
   },
   "scripts": {
-    "crct": "node src/cli.js",
+    "crct": "node bin/cli.js",
     "build": "rollup -c"
   },
   "author": "",
@@ -20,9 +16,5 @@
     "yargs": "^17.5.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.2",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "rollup": "^2.78.1",
-    "rollup-plugin-terser": "^7.0.2"
   }
 }
