@@ -1,6 +1,6 @@
 {
   "name": "react-component-template",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "bin/cli.js",
   "bin": {
@@ -15,6 +15,5 @@
   "dependencies": {
     "yargs": "^17.5.1"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
