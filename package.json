@@ -1,10 +1,13 @@
 {
-  "name": "react-component-template",
+  "name": "@victorzamudio/react-component-template",
   "version": "1.2.0",
   "description": "",
   "main": "bin/cli.js",
   "bin": {
     "create-component": "bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "crct": "node bin/cli.js",
