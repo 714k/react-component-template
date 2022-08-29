@@ -7,6 +7,11 @@ function convertToPascalCase(text) {
 }
 
 const argv = require('yargs/yargs')(process.argv.slice(2))
+  .usage("\nCreate react component template " +
+    "\njust using the name of your component in-kebab-case " +
+    "\n in the folder you wanna create it" +
+    "\n\nExample (In ./components folder):" +
+    "\n> create-component -n my-item-list")
   .alias('n', 'component-name')
   .describe('n', 'Name of your Component \nExample: my-component-name \n')
   .alias('v', 'version')
