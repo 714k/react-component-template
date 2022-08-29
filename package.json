@@ -2,9 +2,9 @@
   "name": "@victorzamudio/react-component-template",
   "version": "1.2.1",
   "description": "",
-  "main": "bin/cli.js",
+  "main": "./bin/cli.js",
   "bin": {
-    "create-component": "bin/cli.js"
+    "create-component": "./bin/cli.js"
   },
   "files": [
     "bin"
@@ -13,8 +13,7 @@
     "access": "public"
   },
   "scripts": {
-    "crct": "node bin/cli.js",
-    "build": "rollup -c"
+    "crct": "node ./bin/cli.js"
   },
   "author": "",
   "license": "ISC",
